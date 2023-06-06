@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//create product
 router.post("/", async (req, res) => {
   try {
     const { name, description, price, category, images: pictures } = req.body;
@@ -23,8 +24,8 @@ router.post("/", async (req, res) => {
     });
     const products = await Product.find();
     res.status(201).json(products);
-  } catch (error) {
-    res.status(400).send(error.message);
+  } catch (e) {
+    res.status(400).send(e.message);
   }
 });
 

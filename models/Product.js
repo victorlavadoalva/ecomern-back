@@ -13,7 +13,7 @@ const ProductSchema = mongoose.Schema(
       type: String,
       required: [true, "cant be blanck"],
     },
-    categori: {
+    category: {
       type: String,
       required: [true, "cant be blanck"],
     },
